@@ -16,7 +16,7 @@ export const processData = (data: Array<Frame>) => {
 
     if (area_name.startsWith('_')) zStore[area_name.substring(1)] = Math.round(sum);
     else if (area_name.startsWith('0_')) xStore[area_name.substring(2)] = Math.round(sum);
-    else yStore[area_name] = Math.round(sum / 600) * 10;
+    else yStore[area_name] = Math.round(sum / 6) / 10;
   });
 
   Object.keys(xStore).map(store => {
